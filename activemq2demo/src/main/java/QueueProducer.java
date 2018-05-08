@@ -28,6 +28,6 @@ public class QueueProducer {
                 return msg;
             }
         });
-        System.out.println("end!");
+        System.out.println("Producer send message!");
     }
 }

@@ -28,7 +28,7 @@
           destroy-method="stop">
         <property name="connectionFactory">
             <bean class="org.apache.activemq.ActiveMQConnectionFactory">
-                <!--消息服务连接信息 -->
+                <!--activemq消息服务连接信息 -->
                 <property name="brokerURL">
                     <value>tcp://127.0.0.1:61616</value>
                 </property>

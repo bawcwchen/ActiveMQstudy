@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: SpringBootDemo Maven Webapp
+Implementation-Version: 2.0.1.RELEASE
+Built-By: hand
+Implementation-Vendor-Id: org.springframework.boot
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_73
+Main-Class: ${start-class}
+

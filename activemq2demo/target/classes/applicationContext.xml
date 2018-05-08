@@ -28,7 +28,7 @@
           destroy-method="stop">
         <property name="connectionFactory">
             <bean class="org.apache.activemq.ActiveMQConnectionFactory">
-                <!--消息服务连接信息 -->
+                <!--activemq消息服务连接信息 -->
                 <property name="brokerURL">
                     <value>tcp://127.0.0.1:61616</value>
                 </property>
@@ -57,18 +57,16 @@
         <property name="connectionFactory" ref="jmsFactory"></property>
         <!--目的地的设置，使用spring来使用activemq时，使用queue还是topic很方便，在这里引用不同地址就ok了 -->
         <property name="defaultDestination" ref="destinationTopic"></property>
-        <!--转换器，我们自己可以继承重写这个类的方法 ，这里使用spring提供的默认方法 -->
-       <!-- <property name="messageConverter">
-            <bean
-                    class="org.springframework.jms.support.converter.SimpleMessageConverter" />
-        </property>-->
     </bean>
 
-    <!--异步监听 -->
+    <!--异步监听,消费者1 -->
     <bean id="consumer1" class="Consumer1">
     </bean>
+
+    <!--异步监听,消费者2 -->
     <bean id="consumer2" class="Consumer2">
     </bean>
+
     <bean id="jmsContainer1"
           class="org.springframework.jms.listener.DefaultMessageListenerContainer">
         <property name="connectionFactory" ref="jmsFactory" />

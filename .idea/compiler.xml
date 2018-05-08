@@ -24,7 +24,11 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="activemq2demo" />
+        <module name="SpringBootDemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="SpringBootDemo" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
