@@ -15,7 +15,7 @@ import org.springframework.context.annotation.ImportResource;
  * author:jun.chen02@hand-china.com
  */
 @Configuration
-@Import(ClassMateConfiguration.class)//导入类中的bean
+@Import({ClassMateConfiguration.class})//导入类中的bean
 @ImportResource(locations = {"classpath:beans.xml"})//导入xml中的bean
 public class UserConfiguration {
    /* @Autowired
