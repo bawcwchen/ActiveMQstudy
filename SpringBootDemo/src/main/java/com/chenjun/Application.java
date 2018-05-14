@@ -1,14 +1,9 @@
 package com.chenjun;
 
 import com.chenjun.configuration.DataSourceConfig;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
-
-import java.util.Arrays;
 
 /**
  * Function Desc: scanBasePackages可以不用显示加上，因为当前启动类就是在com.chenjun包下，所以默认扫描的包也是当前包
@@ -25,7 +20,12 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean
+    /**
+     * 容器中所有的bean
+     * @param ctx
+     * @return
+     */
+    /*@Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
 
@@ -38,5 +38,5 @@ public class Application {
             }
 
         };
-    }
+    }*/
 }
